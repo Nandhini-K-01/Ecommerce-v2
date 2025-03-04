@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .invoice-box {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .invoice-box td, .invoice-box th {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        .invoice-box th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>ShopeHereZone Subscription Invoice</h1>
+    <table class="invoice-box">
+        <tr>
+            <th>Invoice Number</th>
+            <td>{{ invoice_number }}</td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td>{{ user_name }}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{ user_email }}</td>
+        </tr>
+        <tr>
+            <th>Subscription Plan</th>
+            <td>{{ subscription_plan }}</td>
+        </tr>
+        <tr>
+            <th> Amount </th>
+            <td> {{amount}} </td>
+        </tr>
+        <tr>
+            <th> Invoice Date </th>
+            <td> {{ invoice_date }} </td>
+        </tr>
+    </table>
+</body>
