@@ -22,11 +22,11 @@ app.config_from_object(settings, namespace='CELERY')
 app.conf.beat_schedule = {
     "send-mail-everyday-at-7am": {
         'task': 'api.tasks.send_mail_func',
-        'schedule': crontab(hour=22, minute=3)
+        'schedule': crontab(hour=7)
     },
     "update-subscription-status-at-12am": {
         'task': 'api.tasks.update_subscription_status',
-        'schedule': crontab(hour=20, minute=3)
+        'schedule': crontab(hour=0)
     }
 }
 
